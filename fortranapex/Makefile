@@ -3,11 +3,11 @@
 # Ver. 1.0. 27/8-10 - Based on Makefile for Einar Stiansen.
 
 # If using Intel compilers, uncomment a line at the top of the igrf.f90 file
-FC 	= gfortran  # mpif90, ifort
+FC 	= gfortran-8  # mpif90, ifort
 LD      = $(FC)
 LDFLAGS = #-ipo
 FFLAGS 	= -Wall -O3 -fPIC -fcheck=all -fbounds-check -pedantic -Wextra #-ipo -check bounds -check pointer -check uninit
-SFLAGS  = -static #-libgfortran -static-libgcc (AGB, static should work?)
+SFLAGS  = -static -libgfortran #-static-libgcc (AGB, static should work?)
 STATIC  = 0
 
 ifneq ($(STATIC),0)
