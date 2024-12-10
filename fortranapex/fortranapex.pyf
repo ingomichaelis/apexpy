@@ -135,9 +135,9 @@ python module fortranapex ! in
             integer(kind=4) intent(in) :: nmax
             integer(kind=4) intent(in) :: mmax
             real(kind=8) intent(in) :: theta
-            real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(mmax,nmax) :: p
-            real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(mmax,nmax) :: v
-            real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(mmax,nmax) :: w
+            real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(nmax,mmax) :: p
+            real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(nmax,mmax) :: v
+            real(kind=8) dimension(1 + nmax,1 + mmax),intent(out),depend(nmax,mmax) :: w
         end subroutine alfbasis
         module igrf ! in :fortranapex:igrf.f90
             real(kind=8) :: datel
